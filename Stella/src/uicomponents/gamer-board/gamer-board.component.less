@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    height: 100%;
+}
+
+.gamer-board-wrapper {
+    display: flex;
+    flex: auto;
+    height: 100%;
+    align-items: center;
+    background-color: black;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    aspect-ratio: 10/8;
+    max-height: 100vh;
+
+    .card-row {
+        display: flex;
+        flex: 1;
+    }
+}
