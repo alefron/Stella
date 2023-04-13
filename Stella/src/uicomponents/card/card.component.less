@@ -4,6 +4,7 @@
 }
 
 .card {
+    transition: 0.2s;
     background-color: rgb(255, 243, 222);
     flex: 1;
     margin: 7px;
@@ -11,6 +12,17 @@
     padding: 10px;
     display: flex;
     justify-content: end;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: rgba(255, 243, 222, 0.838);
+    }
+
+    &:active {
+        transition: 0s;
+        scale: 1.04;
+        box-shadow: 0px 0px 5px 8px rgba(225, 22, 22, 0.874);
+    }
 
     .circle {
         border: solid 2px;

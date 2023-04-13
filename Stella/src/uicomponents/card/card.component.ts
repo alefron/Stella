@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faFilm, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,5 +7,14 @@ import { faFilm, faStar } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./card.component.less']
 })
 export class CardComponent {
-  icon = faStar;
+  @Input()
+  public id: number = 1;
+  public isSelected: boolean = false;
+  public isSelectionTime: boolean = true;
+
+  public icon = faStar;
+
+  public cardClicked() {
+    
+  }
 }
