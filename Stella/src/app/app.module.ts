@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UIComponentsModule } from 'src/uicomponents/uicomponents.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { UIComponentsModule } from 'src/uicomponents/uicomponents.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UIComponentsModule
+    UIComponentsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

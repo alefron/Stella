@@ -4,7 +4,29 @@
 }
 
 .card {
-    background-color: aquamarine;
+    background-color: rgb(255, 243, 222);
     flex: 1;
-    margin: 10px;
+    margin: 7px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+
+    .circle {
+        border: solid 2px;
+        border-radius: 20px;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 25px;
+        max-height: 50%;
+
+        .icon-star {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

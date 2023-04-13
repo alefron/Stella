@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faFilm, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.less']
 })
 export class CardComponent {
-
+  icon = faStar;
 }
