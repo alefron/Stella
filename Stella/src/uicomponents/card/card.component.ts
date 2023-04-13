@@ -12,9 +12,11 @@ export class CardComponent {
   public isSelected: boolean = false;
   public isSelectionTime: boolean = true;
 
+  public readonly pathToXImage: string = '../../assets/x.png';
+
   public icon = faStar;
 
   public cardClicked() {
-    
+
   }
 }
