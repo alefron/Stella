@@ -17,6 +17,6 @@ export class CardComponent {
   public icon = faStar;
 
   public cardClicked() {
-
+    this.isSelected = !this.isSelected;
   }
 }

@@ -5,5 +5,5 @@
         <fa-icon class="icon-star" [icon]="icon"></fa-icon>
     </div>
         
-    <img class="x-image" [src]="pathToXImage">
+    <img *ngIf="isSelected" class="x-image" [src]="pathToXImage">
 </div>
