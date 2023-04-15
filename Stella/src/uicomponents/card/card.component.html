@@ -1,11 +1,9 @@
 <div class="card" (click)="cardClicked()">
-        <div class="stars">
-            <div class="circle">
-                <fa-icon [icon]="icon"></fa-icon>
-            </div>
-            <fa-icon class="icon-star" [icon]="icon"></fa-icon>
-            <fa-icon class="icon-star" [icon]="icon"></fa-icon>
-        </div>
-
-        <img class="x-image" [src]="pathToXImage">
+    <div class="stars">
+        <fa-icon class="icon-star circle" [icon]="icon"></fa-icon>
+        <fa-icon class="icon-star" [icon]="icon"></fa-icon>
+        <fa-icon class="icon-star" [icon]="icon"></fa-icon>
+    </div>
+        
+    <img class="x-image" [src]="pathToXImage">
 </div>
