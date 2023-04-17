@@ -1,0 +1,42 @@
+@import '../../colors-templates/color-themes.less';
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+button {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+}
+
+.enabled {
+    background-color: var(--enabledButton);
+    color: var(--textColor);
+    box-shadow: 3px 3px 10px 0px #00000065;
+
+    &:hover {
+        background-color: var(--hoverButton);
+        transition: 0.3s;
+    }
+
+    &:active {
+        transition: 0.1s;
+        
+        scale: 1.02;
+    }
+
+    &:active {
+        transition: 0s;
+        border: solid 3px;
+        border-color: var(--activeButtonBorderColor);
+    }
+}
+
+.disabled {
+    background-color: var(--inactiveButton);
+    color: var(--inactiveButtonText);
+}

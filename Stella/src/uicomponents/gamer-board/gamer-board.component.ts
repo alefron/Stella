@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ColorThemeClass } from 'src/colors-templates/color-theme';
+
 
 @Component({
   selector: 'app-gamer-board',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./gamer-board.component.less']
 })
 export class GamerBoardComponent {
+  public ColorThemeClass = ColorThemeClass;
 
+  constructor() {
+    console.log(this.ColorThemeClass);
+  }
 }

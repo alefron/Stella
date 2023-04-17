@@ -1,0 +1,5 @@
+<button (click)="clicked()"
+    [disabled]="isDisabled"
+    [ngClass]="{'enabled': !isDisabled, 'disabled': isDisabled}">
+    {{textOnButton}}
+</button>

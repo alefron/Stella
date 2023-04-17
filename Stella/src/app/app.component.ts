@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ColorThemeClass, setColorTheme } from 'src/colors-templates/color-theme';
+import { ColorThemeService } from 'src/colors-templates/color-theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Stella';
 
-  public constructor(private _router: Router) {
-    //this._router.navigate(['gamerBoard']);
+  public constructor(private _colorThemeService: ColorThemeService) {
+    let className = this._colorThemeService.getColorThemeClass();
+    setColorTheme(className);
   }
 }

@@ -1,7 +1,7 @@
 
-<div class="gamer-board-wrapper">
-    <div class="game-board">
 
+<div class="gamer-board-wrapper" [ngClass]="ColorThemeClass">
+    <div class="game-board">
         <div class="card-row">
             <app-card>
     
@@ -56,8 +56,8 @@
         </div>
 
         <div class="buttons">
-            <button>dfdfd</button>
-            <button>dfdfd</button>ś
+            <app-button [textOnButton]="'counting points'"></app-button>
+            <app-button [textOnButton]="'next round'" [isDisabled]="true"></app-button>
         </div>
         
     </div>
