@@ -6,16 +6,24 @@
 .card {
     transition: 0.2s;
     background-color: rgb(255, 243, 222);
-    margin: 7px;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 7px 7px 14px 2px #00000065;
+    
 
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @media (min-aspect-ratio: 21 / 32) {
+        margin: 7px;
+    }
+
+    @media (max-aspect-ratio: 21 / 32) {
+        margin: 2px;
+    }
 
 
     &:hover {
