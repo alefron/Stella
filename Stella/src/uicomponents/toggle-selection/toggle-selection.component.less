@@ -1,0 +1,59 @@
+@import '../../colors-templates/color-themes.less';
+
+.toggle-container {
+    display: flex;
+    box-shadow: 3px 3px 10px 0px #00000065;
+    border-radius: 10px;
+
+    .button {
+        transition: 0.3s;
+        display: flex;
+        height: 40px;
+        flex: 1;
+        background-color: var(--secondaryButton);
+        border: 2px solid;
+        border-color: var(--secondaryButtonBorder);
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+        color: var(--baseTextColor);
+
+        &:hover {
+            background-color: var(--secondaryButtonHoverColor);
+            transition: 0.3s;
+        }
+    
+        &:active {
+            transition: 0.1s;
+            scale: 1.02;
+        }
+    
+        &:active {
+            transition: 0s;
+            border-color: var(--activeButtonBorderColor);
+        }
+    }
+
+    .left-button {
+        margin-right: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 1px solid;
+        border-color: var(--secondaryButtonBorder);
+    }
+
+    .right-button {
+        margin-left: 0px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: 1px solid;
+        border-color: var(--secondaryButtonBorder);
+    }
+
+    .selected {
+        transition: 0.3s;
+        background-color: var(--secondaryButtonHoverColor);
+    }
+}

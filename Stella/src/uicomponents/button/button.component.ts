@@ -17,6 +17,9 @@ export class ButtonComponent {
   @Input()
   public isDisabled: boolean = false;
 
+  @Input()
+  public height: number = 40;
+
   @Output()
   public click = new EventEmitter<void>();
 

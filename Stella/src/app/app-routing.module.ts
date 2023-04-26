@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { GamerBoardComponent } from 'src/uicomponents/gamer-board/gamer-board.component';
 
 const routes: Routes = [
-  { path: 'gamerBoard', component: GamerBoardComponent }
 ];
 
 @NgModule({

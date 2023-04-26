@@ -1,5 +1,6 @@
 <button (click)="clicked()"
     [disabled]="isDisabled"
-    [ngClass]="{'enabled': !isDisabled, 'disabled': isDisabled}">
+    [ngClass]="{'enabled': !isDisabled, 'disabled': isDisabled}"
+    [ngStyle]="{'height': height + 'px'}">
     {{textOnButton}}
 </button>

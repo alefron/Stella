@@ -1,2 +1,5 @@
 <router-outlet></router-outlet>
-<app-gamer-board></app-gamer-board>
+
+<app-gamer-board *ngIf="isLoggedIn" [ngClass]="colorClassName"></app-gamer-board>
+
+<app-login-window *ngIf="!isLoggedIn" [ngClass]="colorClassName"></app-login-window>
