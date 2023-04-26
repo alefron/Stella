@@ -1,0 +1,72 @@
+@import '../../colors-templates/color-themes.less';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.wrapper {
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.778);
+        box-shadow: 3px 3px 10px 0px #00000065;
+        border-radius: 10px;
+        height: 60px;
+        padding: 10px; 
+
+        .title {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .selection {
+            margin-bottom: auto;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-around;
+
+            .circle {
+                display: flex;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                box-shadow: 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+                -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+            }
+
+            .blue {
+                background-color: @blueMain;
+            }
+
+            .black {
+                background-color: @blackMain;
+            }
+
+            .purple {
+                background-color: @purpleMain;
+            }
+
+            .pink {
+                background-color: @pinkMain;
+            }
+
+            .yellow {
+                background-color: @yellowMain;
+            }
+
+            .green {
+                background-color: @greenMain;
+            }
+        }
+    }
+}

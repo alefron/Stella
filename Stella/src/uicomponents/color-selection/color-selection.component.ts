@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ColorSelectionComponent {
 
+  public colorSelected() {
+    console.log('sdfsdf')
+  }
 }
