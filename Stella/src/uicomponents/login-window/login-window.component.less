@@ -11,15 +11,8 @@
     ::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 0px;
-      }
-      
-    //   ::-webkit-scrollbar-thumb {
-    //     border-radius: 4px;
-    //     background-color: rgba(0, 0, 0, .5);
-    //     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-    //   }
-
-
+    }
+    
     .login-window {
         background-color: rgb(255, 243, 222);
         margin: 20px;
@@ -31,6 +24,11 @@
         justify-content: center;
         align-items: center;
         overflow: scroll;
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 0px;
+        }
 
         @media (max-width: 559px) {
             flex: 1;
@@ -48,6 +46,11 @@
             align-items: center;
             margin-top: auto;
             margin-bottom: auto;
+
+            ::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 0px;
+            }
 
             @media (max-width: 559px) {
                 flex: 1;
