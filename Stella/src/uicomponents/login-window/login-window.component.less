@@ -1,14 +1,9 @@
 @import '../../colors-templates/color-themes.less';
 
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 0px;
-}
-
 :host {
     display: flex;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     background-color: var(--background);
     align-items: center;
     justify-content: center;
@@ -23,7 +18,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: scroll;
+        overflow: auto;
 
         @media (max-width: 559px) {
             flex: 1;
@@ -34,7 +29,7 @@
         }
 
         .wrapper {
-            overflow: scroll;
+            overflow: auto;
             display: flex;
             flex-direction: column;
             align-self: stretch;
