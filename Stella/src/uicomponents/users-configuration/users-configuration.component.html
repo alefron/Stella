@@ -1,19 +1,14 @@
 <div class="card">
-    <app-toggle-selection></app-toggle-selection>
+    <app-toggle-selection (toggleSelectionChanged)="userModeChanged($event)"></app-toggle-selection>
 
-    <div class="list-container">
+    <div *ngIf="userIsMaster" class="list-container">
         <ol>
-            <li>user</li>
-            <li>user2</li>
-            <li>user3</li>
-            <li>user</li>
-            <li>user2</li>
-            <li>user3</li>
+            <li *ngFor="let user of users">{{user}}</li>
         </ol>
 
         <div class="input-wrapper">
-            <input class="input">
-            <app-button class="add-button" [textOnButton]="'+'" [height]="25"></app-button>
+            <input (keyup)="updateUserName($event)" class="input">
+            <app-button (click)="addUser()" class="add-button" [textOnButton]="'+'" [height]="25"></app-button>
         </div>
         
     </div>

@@ -4,12 +4,41 @@
             Choose color:
         </div>
         <div class="selection">
-            <span class="circle blue"></span>
-            <span class="circle yellow"></span>
-            <span class="circle purple"></span>
-            <span class="circle pink"></span>
-            <span class="circle black"></span>
-            <span class="circle green"></span>
+            <span
+                class="circle blue"
+                [ngClass]="{'selected' : colorTheme === Color.Blue}"
+                (click)="colorSelected(Color.Blue)">
+            </span>
+
+            <span
+                class="circle yellow"
+                [ngClass]="{'selected' : colorTheme === Color.Yellow}"
+                (click)="colorSelected(Color.Yellow)">
+            </span>
+
+            <span
+                class="circle selected purple"
+                [ngClass]="{'selected' : colorTheme === Color.Purple}"
+                (click)="colorSelected(Color.Purple)">
+            </span>
+
+            <span
+                class="circle pink"
+                [ngClass]="{'selected' : colorTheme === Color.Pink}"
+                (click)="colorSelected(Color.Pink)">
+            </span>
+
+            <span
+                class="circle black"
+                [ngClass]="{'selected' : colorTheme === Color.Black}"
+                (click)="colorSelected(Color.Black)">
+            </span>
+
+            <span
+                class="circle green"
+                [ngClass]="{'selected' : colorTheme === Color.Green}"
+                (click)="colorSelected(Color.Green)">
+            </span>
         </div>
     </div>
 </div>

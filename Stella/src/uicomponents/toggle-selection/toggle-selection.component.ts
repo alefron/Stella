@@ -10,7 +10,7 @@ export class ToggleSelectionComponent {
   @Output()
   public toggleSelectionChanged = new EventEmitter<UserType>();
 
-  public selectedItemId: number = -1;
+  public selectedItemId: number = 1;
 
   public clickInToggle(id: number) {
     if (this.selectedItemId != id) {

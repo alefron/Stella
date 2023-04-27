@@ -42,30 +42,92 @@
                 border-radius: 15px;
                 box-shadow: 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
                 -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+                transition: 0.2s;
+                border: 2px solid;
+                border-color: rgb(255, 255, 255);
+            }
+
+            .selected {
+                border: 2px solid;
+                border-color: var(--hoverButton);
             }
 
             .blue {
                 background-color: @blueMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @blueMainHover;
+                }
             }
 
             .black {
                 background-color: @blackMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @blackMainHover;
+                }
             }
 
             .purple {
                 background-color: @purpleMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @purpleMainHover;
+                }
             }
 
             .pink {
                 background-color: @pinkMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @pinkMainHover;
+                }
             }
 
             .yellow {
                 background-color: @yellowMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @yellowMainHover;
+                }
             }
 
             .green {
                 background-color: @greenMain;
+
+                &:hover {
+                    transition: 0.2s;
+                    box-shadow: -12px -12px 16px 0 rgba(255, 255, 255, 0.3) inset, 8px 8px 12px 0 rgba(0, 0, 0, 0.25) inset;
+                }
+
+                &:active {
+                    background-color: @greenMainHover;
+                }
             }
         }
     }

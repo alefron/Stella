@@ -2,12 +2,12 @@
     <div class="wrapper">
         <div class="logo"></div>
     
-        <app-users-configuration class="content"></app-users-configuration>
+        <app-users-configuration class="content" (userTypeChanged)="userTypeChanged($event)"></app-users-configuration>
 
         <app-color-selection></app-color-selection>
 
         <div class="button-wrapper">
-            <app-button [textOnButton]="'start'"></app-button>
+            <app-button (click)="startClicked()" [textOnButton]="'start'"></app-button>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 
 .black-theme {
-    --background: #151515;
+    --background: @blackMain;
     --enabledButton: #f2f2f2;
     --hoverButton: #cfcfcf;
     --activeButtonBorderColor: #656565;
@@ -14,7 +14,7 @@
 }
 
 .blue-theme {
-    --background: #388fe0;
+    --background: @blueMain;
     --enabledButton: #080065;
     --hoverButton: #060048;
     --activeButtonBorderColor: #000000;
@@ -28,7 +28,7 @@
 }
 
 .yellow-theme {
-    --background: #face3f;
+    --background: @yellowMain;
     --enabledButton:  #fb4955;
     --hoverButton: #fb7070;
     --activeButtonBorderColor: #d0454c;
@@ -42,7 +42,7 @@
 }
 
 .green-theme {
-    --background: #1e9c19;
+    --background: @greenMain;
     --enabledButton:  #fbca49;
     --hoverButton: #f8c237;
     --activeButtonBorderColor: #d4a52c;
@@ -56,7 +56,7 @@
 }
 
 .pink-theme {
-    --background: #eca4dc;
+    --background: @pinkMain;
     --enabledButton:  #1781dc;
     --hoverButton: #1478d0;
     --activeButtonBorderColor: #0d60a8;
@@ -70,7 +70,7 @@
 }
 
 .purple-theme {
-    --background: #9c79f5;
+    --background: @purpleMain;
     --enabledButton:  #3617dc;
     --hoverButton: #2d14bc;
     --activeButtonBorderColor: #1f0d82;
@@ -84,8 +84,19 @@
 }
 
 @blueMain: #388fe0;
+@blueMainHover: #2868a4;
+
 @blackMain: #151515;
+@blackMainHover: #515151;
+
 @greenMain: #1e9c19;
+@greenMainHover: #147411;
+
 @purpleMain: #9c79f5;
+@purpleMainHover: #7a5ec1;
+
 @pinkMain: #eca4dc;
+@pinkMainHover: #be83b2;
+
 @yellowMain: #face3f;
+@yellowMainHover: #dcb534;

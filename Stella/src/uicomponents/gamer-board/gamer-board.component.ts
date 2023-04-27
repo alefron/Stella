@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ColorThemeClass } from 'src/colors-templates/color-theme';
-
+import { ColorThemeService } from 'src/colors-templates/color-theme.service';
 
 @Component({
   selector: 'app-gamer-board',
@@ -8,9 +7,18 @@ import { ColorThemeClass } from 'src/colors-templates/color-theme';
   styleUrls: ['./gamer-board.component.less']
 })
 export class GamerBoardComponent {
-  public ColorThemeClass = ColorThemeClass;
+  public colorThemeClass?: string;
 
-  constructor() {
-    console.log(this.ColorThemeClass);
+  constructor(private _colorThemeService: ColorThemeService) {
+    this.refreshColorTheme();
+    this._colorThemeService.colorThemeChanged.subscribe({
+      next: () => {
+        this.refreshColorTheme();
+      }
+    })
+  }
+
+  private refreshColorTheme(): void {
+    this.colorThemeClass = this._colorThemeService.colorThemeClass;
   }
 }

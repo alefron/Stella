@@ -2,4 +2,4 @@
 
 <app-gamer-board *ngIf="isLoggedIn" [ngClass]="colorClassName"></app-gamer-board>
 
-<app-login-window *ngIf="!isLoggedIn" [ngClass]="colorClassName"></app-login-window>
+<app-login-window *ngIf="!isLoggedIn" [ngClass]="colorClassName" (gameTimeIsNow)="goToGameBoard($event)"></app-login-window>

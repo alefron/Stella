@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Colors } from './Colors';
+import { Subject } from 'rxjs';
+import { Color, ColorThemeDefinition } from './Colors';
 
 @Injectable({
   providedIn: 'root'
@@ -8,27 +9,39 @@ export class ColorThemeService {
 
   constructor() { }
 
-  public getColorThemeClass(): string {
-    const color = this.getRandomColor();
+  public colorThemeChanged = new Subject<void>();
+  public colorThemeClass?: string;
+  public colorTheme?: Color;
+
+  public getColorThemeDefinition(color?: Color): ColorThemeDefinition {
+    if (!color && color != 0) {
+        color = this.getRandomColor();
+    }
     switch (color) {
-        case Colors.Blue:
-            return 'blue-theme';
-        case Colors.Green:
-            return 'green-theme';
-        case Colors.Pink:
-            return 'pink-theme';
-        case Colors.Purple:
-            return 'purple-theme';
-        case Colors.Yellow:
-            return 'yellow-theme';
-        case Colors.Black:
+        case Color.Blue:
+            return {colorThemeClass: 'blue-theme', colorTheme: Color.Blue};
+        case Color.Green:
+            return {colorThemeClass: 'green-theme', colorTheme: Color.Green};
+        case Color.Pink:
+            return {colorThemeClass: 'pink-theme', colorTheme: Color.Pink};
+        case Color.Purple:
+            return {colorThemeClass: 'purple-theme', colorTheme: Color.Purple};
+        case Color.Yellow:
+            return {colorThemeClass: 'yellow-theme', colorTheme: Color.Yellow};
+        case Color.Black:
         default:
-            return 'black-theme';
+            return {colorThemeClass: 'black-theme', colorTheme: Color.Black};
     }
   }
 
-  private getRandomColor(): Colors {
-      const values = Object.values(Colors).filter(value => typeof value === 'number') as Colors[];
+  public setColorTheme(colorThemeDefinition: ColorThemeDefinition): void {
+    this.colorThemeClass = colorThemeDefinition.colorThemeClass;
+    this.colorTheme = colorThemeDefinition.colorTheme;
+    this.colorThemeChanged.next();
+  }
+
+  private getRandomColor(): Color {
+      const values = Object.values(Color).filter(value => typeof value === 'number') as Color[];
       const randomIndex = Math.floor(Math.random() * values.length);
       return values[randomIndex];
   }
