@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Inject } from '@angular/core';
 import { ColorThemeService } from 'src/colors-templates/color-theme.service';
 import { UserModel } from 'src/uicomponents/login-window/user.model';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
 
   private userModel?: UserModel;
 
-  public constructor(private _colorThemeService: ColorThemeService) {
+  public constructor(private _colorThemeService: ColorThemeService, @Inject(DOCUMENT) private _document: Document) {
     let colorThemeDefinition = this._colorThemeService.getColorThemeDefinition();
     _colorThemeService.setColorTheme(colorThemeDefinition);
     this.refreshColorTheme();
@@ -36,5 +37,6 @@ export class AppComponent {
 
   private refreshColorTheme(): void {
     this.colorClassName = this._colorThemeService.colorThemeClass;
+    this._document.body.style.backgroundColor = this._colorThemeService.getMainColorValue();
   }
 }

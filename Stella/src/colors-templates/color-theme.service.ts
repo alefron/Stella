@@ -40,6 +40,24 @@ export class ColorThemeService {
     this.colorThemeChanged.next();
   }
 
+  public getMainColorValue(): string {
+    switch(this.colorTheme) {
+        case Color.Black:
+        default:
+            return '#151515';
+        case Color.Blue:
+            return '#388fe0';
+        case Color.Green:
+            return '#1e9c19';
+        case Color.Pink:
+            return '#eca4dc';
+        case Color.Purple:
+            return '#9c79f5';
+        case Color.Yellow:
+            return '#face3f';
+    }
+  }
+
   private getRandomColor(): Color {
       const values = Object.values(Color).filter(value => typeof value === 'number') as Color[];
       const randomIndex = Math.floor(Math.random() * values.length);
