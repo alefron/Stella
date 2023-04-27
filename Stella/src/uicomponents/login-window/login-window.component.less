@@ -1,5 +1,10 @@
 @import '../../colors-templates/color-themes.less';
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+}
+
 :host {
     display: flex;
     height: 100%;
@@ -7,11 +12,6 @@
     background-color: var(--background);
     align-items: center;
     justify-content: center;
-
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 0px;
-    }
     
     .login-window {
         background-color: rgb(255, 243, 222);
@@ -24,11 +24,6 @@
         justify-content: center;
         align-items: center;
         overflow: scroll;
-
-        ::-webkit-scrollbar {
-            -webkit-appearance: none;
-            width: 0px;
-        }
 
         @media (max-width: 559px) {
             flex: 1;

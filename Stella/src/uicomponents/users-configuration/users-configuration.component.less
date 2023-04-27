@@ -10,6 +10,11 @@
     }
 }
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+}
+
 .card {
     padding: 20px;
     display: flex;
@@ -35,11 +40,6 @@
             flex: 1;
             background-color: var(--secondaryButton);
             border-radius: 10px;
-
-            ::-webkit-scrollbar {
-                -webkit-appearance: none;
-                width: 0px;
-            }
         }
 
         .input-wrapper {
