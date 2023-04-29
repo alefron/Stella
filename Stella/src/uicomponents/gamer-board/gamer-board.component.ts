@@ -8,6 +8,7 @@ import { ColorThemeService } from 'src/colors-templates/color-theme.service';
 })
 export class GamerBoardComponent {
   public colorThemeClass?: string;
+  public countingPointsMode: boolean = false;
 
   constructor(private _colorThemeService: ColorThemeService) {
     this.refreshColorTheme();
@@ -16,6 +17,10 @@ export class GamerBoardComponent {
         this.refreshColorTheme();
       }
     })
+  }
+
+  public enableCountingPoints(): void {
+    this.countingPointsMode = true;
   }
 
   private refreshColorTheme(): void {

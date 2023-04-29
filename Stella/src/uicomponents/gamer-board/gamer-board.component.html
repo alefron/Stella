@@ -2,61 +2,61 @@
 
 <div class="gamer-board-wrapper" [ngClass]="colorThemeClass">
     <div class="game-board">
-        <div class="card-row">
-            <app-card>
+        <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 1}">
+            <app-card [countingPointsMode]="countingPointsMode">
     
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
         </div>
 
-        <div class="card-row">
-            <app-card>
+        <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 2}">
+            <app-card [countingPointsMode]="countingPointsMode">
     
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
         </div>
-        <div class="card-row">
-            <app-card>
+        <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 3}">
+            <app-card [countingPointsMode]="countingPointsMode">
     
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
-            <app-card>
+            <app-card [countingPointsMode]="countingPointsMode">
                 
             </app-card>
         </div>
 
-        <div class="buttons">
-            <app-button [textOnButton]="'counting points'"></app-button>
+        <div class="buttons" [ngStyle]="{'grid-column' : 1, 'grid-row' : 4}">
+            <app-button [textOnButton]="'counting points'" (click)="enableCountingPoints()"></app-button>
             <app-button [textOnButton]="'next round'" [isDisabled]="true"></app-button>
         </div>
         

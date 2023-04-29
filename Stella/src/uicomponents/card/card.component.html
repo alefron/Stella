@@ -1,9 +1,10 @@
-<div class="card" (click)="cardClicked()">
-    <div class="stars">
-        <fa-icon class="icon-star circle" [icon]="icon"></fa-icon>
-        <fa-icon class="icon-star" [icon]="icon"></fa-icon>
-        <fa-icon class="icon-star" [icon]="icon"></fa-icon>
+<div class="card"
+    [ngClass]="{'counting-points-inactive' : countingPointsMode && !isSelected, 'counting-points-selected-card' : countingPointsMode && isSelected, 'selection-mode' : !countingPointsMode}"
+    (click)="cardClicked()">
+    <img *ngIf="isSelected && !countingPointsMode" class="x-image" [src]="pathToXImage">
+    <div *ngIf="countingPointsMode && isSelected" class="stars-box">
+        <div class="star-image" [ngStyle]="{'grid-column' : 1, 'grid-row' : 1, 'background-image' : firstStarSelected ? starFillCircle : starOutlineCircle}" (click)="starClicked(1)"></div>
+        <div class="star-image" [ngStyle]="{'grid-column' : 1, 'grid-row' : 2, 'background-image' : secondStarSelected ? starFill : starOutline}" (click)="starClicked(2)"></div>
+        <div class="star-image" [ngStyle]="{'grid-column' : 1, 'grid-row' : 3, 'background-image' : thirdStarSelected ? starFill : starOutline}" (click)="starClicked(3)"></div>
     </div>
-        
-    <img *ngIf="isSelected" class="x-image" [src]="pathToXImage">
 </div>
