@@ -8,6 +8,7 @@ import { LoginWindowComponent } from './login-window/login-window.component';
 import { UsersConfigurationComponent } from './users-configuration/users-configuration.component';
 import { ToggleSelectionComponent } from './toggle-selection/toggle-selection.component';
 import { ColorSelectionComponent } from './color-selection/color-selection.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 
 
@@ -19,7 +20,8 @@ import { ColorSelectionComponent } from './color-selection/color-selection.compo
     LoginWindowComponent,
     UsersConfigurationComponent,
     ToggleSelectionComponent,
-    ColorSelectionComponent
+    ColorSelectionComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,

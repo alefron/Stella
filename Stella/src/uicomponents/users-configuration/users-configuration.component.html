@@ -1,5 +1,5 @@
 <div class="card">
-    <app-toggle-selection (toggleSelectionChanged)="userModeChanged($event)"></app-toggle-selection>
+    <app-toggle-selection (toggleSelectionChanged)="userModeChanged($event)" [firstOption]="'Game Master'" [secondOption]="'Ordinary User :('"></app-toggle-selection>
 
     <div *ngIf="userIsMaster" class="list-container">
         <ol>

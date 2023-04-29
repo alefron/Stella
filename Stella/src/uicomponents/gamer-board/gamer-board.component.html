@@ -3,61 +3,71 @@
 <div class="gamer-board-wrapper" [ngClass]="colorThemeClass">
     <div class="game-board">
         <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 1}">
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
     
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
         </div>
 
         <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 2}">
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
     
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
         </div>
         <div class="card-row" [ngStyle]="{'grid-column' : 1, 'grid-row' : 3}">
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
     
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
-            <app-card [countingPointsMode]="countingPointsMode">
+            <app-card [countingPointsMode]="countingPointsMode" (cardSelected)="cardClicked($event)">
                 
             </app-card>
         </div>
 
         <div class="buttons" [ngStyle]="{'grid-column' : 1, 'grid-row' : 4}">
-            <app-button [textOnButton]="'counting points'" (click)="enableCountingPoints()"></app-button>
-            <app-button [textOnButton]="'next round'" [isDisabled]="true"></app-button>
+            <div class="navigation-buttons">
+                <app-button [textOnButton]="'counting points'" [isDisabled]="countingPointsMode || !selectedCardsCount" (click)="enableCountingPoints()"></app-button>
+                <app-button [textOnButton]="'next round (' + points + ')'" [isDisabled]="!countingPointsMode" (click)="enableSelection()"></app-button>
+            </div>
+            
+            <div class="checkboxes" *ngIf="countingPointsMode">
+                <app-checkbox [isChecked]="!inTheLight" [title]="inTheLight ? 'In the light' : 'In the dark'" (stateChanged)="darkCheckboxChanged($event)"></app-checkbox>
+                <app-checkbox [isChecked]="!isSuccess" [title]="isSuccess ? 'Success' : 'Failure'" (stateChanged)="failureCheckboxChanged($event)"></app-checkbox>
+            </div>
+
+            {{totalPoints}}
+            
         </div>
         
     </div>

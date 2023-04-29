@@ -1,0 +1,10 @@
+<div *ngIf="isChecked" class="wrapper" (click)="clicked()">
+    <div *ngIf="isChecked" class="title">{{title}}</div>
+    <div class="box"></div>
+</div>
+
+<div *ngIf="!isChecked" class="wrapper" (click)="clicked()">
+    <div class="box"></div>
+    <div class="title">{{title}}</div>
+</div>
+

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserType } from './user-type.enum';
 
 @Component({
@@ -7,6 +7,12 @@ import { UserType } from './user-type.enum';
   styleUrls: ['./toggle-selection.component.less']
 })
 export class ToggleSelectionComponent {
+  @Input()
+  public firstOption: string = '';
+
+  @Input()
+  public secondOption: string = '';
+
   @Output()
   public toggleSelectionChanged = new EventEmitter<UserType>();
 
